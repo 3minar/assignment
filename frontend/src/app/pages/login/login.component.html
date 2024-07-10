@@ -1,0 +1,10 @@
+<div style="display: block; width: 30%; margin: 0 auto; padding: 20px; text-align: center">
+  <input type="text" placeholder="Please input Username" pInputText [(ngModel)]="userInfo.username"/>
+  <br/>
+  <br/>
+  <input type="password" placeholder="Please input your password" pInputText [(ngModel)]="userInfo.password"/>
+  <br/>
+  <br/>
+  <button pButton pRipple label="Login" (click)="login()" class="p-button-success"></button>
+</div>
+<p-messages [(value)]="messages" [enableService]="false" [closable]="true"></p-messages>

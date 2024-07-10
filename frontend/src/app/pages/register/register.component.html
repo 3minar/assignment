@@ -1,0 +1,25 @@
+<div style="display: block; width: 30%; margin: 0 auto; padding: 20px; text-align: center">
+  <input type="text" placeholder="Please input your name" pInputText [(ngModel)]="user.name"/>
+  <br/>
+  <br/>
+  <p-inputNumber [(ngModel)]="user.age" placeholder="Input your age" inputId="minmax" mode="decimal" [min]="10" [max]="100"> </p-inputNumber>
+  <br/>
+  <br/>
+  <select [(ngModel)]="user.gender" class="p-inputtext p-component">
+    <option value="0">male</option>
+    <option value="1">female</option>
+  </select>
+  <br/>
+  <br/>
+  <input type="text" placeholder="Please input address" pInputText [(ngModel)]="user.address"/>
+  <br/>
+  <br/>
+  <input type="text" placeholder="Please input username" pInputText [(ngModel)]="user.username"/>
+  <br/>
+  <br/>
+  <input type="password" placeholder="Please input your password" pInputText [(ngModel)]="user.password"/>
+  <br/>
+  <br/>
+  <button pButton pRipple label="Register" (click)="register()" class="p-button-success"></button>
+</div>
+<p-messages [(value)]="messages" [enableService]="false" [closable]="true"></p-messages>
