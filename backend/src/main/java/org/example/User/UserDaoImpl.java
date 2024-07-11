@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.List;
 
-@Repository
+@Repository("list")
 public class UserDaoImpl implements UserDao {
 
     public final static List<User> users = new ArrayList<>();

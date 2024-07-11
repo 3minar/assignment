@@ -1,14 +1,23 @@
 package org.example.User;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import org.example.GenderEnum;
 
+@Entity
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
     private String name;
     private int age;
     private GenderEnum gender;
     private String address;
     private String username;
     private String password;
+
 
     public User(String name, int age, GenderEnum gender, String address, String username, String password) {
         this.name = name;
@@ -17,6 +26,9 @@ public class User {
         this.address = address;
         this.username = username;
         this.password = password;
+    }
+
+    public User() {
     }
 
     public String getName() {

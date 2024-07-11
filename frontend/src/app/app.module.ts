@@ -19,6 +19,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {InputNumberModule} from "primeng/inputnumber";
 import {DropdownModule} from "primeng/dropdown";
 import {TableModule} from "primeng/table";
+import {PaginatorModule} from "primeng/paginator";
 
 @NgModule({
   declarations: [
@@ -30,20 +31,21 @@ import {TableModule} from "primeng/table";
     RegisterComponent,
     UsersComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    InputTextModule,
-    FormsModule,
-    ButtonModule,
-    RippleModule,
-    HttpClientModule,
-    MessagesModule,
-    BrowserAnimationsModule,
-    InputNumberModule,
-    DropdownModule,
-    TableModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        InputTextModule,
+        FormsModule,
+        ButtonModule,
+        RippleModule,
+        HttpClientModule,
+        MessagesModule,
+        BrowserAnimationsModule,
+        InputNumberModule,
+        DropdownModule,
+        TableModule,
+        PaginatorModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

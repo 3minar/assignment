@@ -1,6 +1,7 @@
 package org.example.User;
 
 import org.apache.logging.log4j.util.Strings;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,7 +11,7 @@ public class UserService {
 
     UserDao userDao;
 
-    public UserService(UserDao userDao) {
+    public UserService(@Qualifier("list") UserDao userDao) {
         this.userDao = userDao;
     }
 
